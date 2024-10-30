@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "chat/Controller")
+@ComponentScan(basePackages = "chat")
 @EnableJpaRepositories
 public class cinemaApplication {
 

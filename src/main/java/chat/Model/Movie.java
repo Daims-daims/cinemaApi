@@ -27,8 +27,9 @@ public class Movie {
 
     public Movie(){}
 
-    public Movie(String name){
+    public Movie(String name,Integer movieLength){
         this.name = name;
+        this.movieLength = movieLength;
     }
 
     public Integer getId() {
@@ -37,5 +38,9 @@ public class Movie {
 
     public String getName() {
         return name;
+    }
+
+    public Integer getMovieLength() {
+        return movieLength;
     }
 }

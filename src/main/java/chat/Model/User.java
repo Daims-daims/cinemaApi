@@ -14,9 +14,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @Column(nullable = false)
     private String firstName;
 
+    @Column(nullable = false)
     private String lastName;
+
 
     @Past(message = "User can't be born in the future")
     private LocalDate dateOfBirth;

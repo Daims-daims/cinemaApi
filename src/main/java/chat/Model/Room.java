@@ -24,7 +24,7 @@ public class Room {
     @Column(nullable = false)
     private Integer capacity;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "room")
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, mappedBy = "room")
     private Set<MovieSession> movieSessions;
 
     public Room(){}
@@ -32,6 +32,10 @@ public class Room {
     public Room(String name, Integer capacity) {
         this.name = name;
         this.capacity = capacity;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {
